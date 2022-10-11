@@ -1,72 +1,72 @@
-import React,{Component} from 'react';
-import {View, Text, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import AppChild from './AppChild';
 
-class App extends Component{
-  constructor(props){
+class App extends Component {
+  constructor(props) {
     super(props);
     console.log("Parent Constructor");
-    this.state={
-      counter : 0
+    this.state = {
+      counter: 0
     }
   }
-  increment=()=>{
-    if(this.state.counter<10){
-      this.setState({counter:this.state.counter+1});
+  increment = () => {
+    if (this.state.counter < 10) {
+      this.setState({ counter: this.state.counter + 1 });
     }
-    else{
+    else {
       alert(" No INCREMENT after 10 ");
     }
   }
-  decrement=()=>{
-    if(this.state.counter>0){
-      this.setState({counter:this.state.counter-1});
+  decrement = () => {
+    if (this.state.counter > 0) {
+      this.setState({ counter: this.state.counter - 1 });
     }
-    else{
+    else {
       alert(" No DECREMENT after 0 ");
     }
   }
-  reset=()=>{
-    if(this.state.counter==0){
+  reset = () => {
+    if (this.state.counter == 0) {
       alert(" Counter is already RESET ");
     }
-    else{
-      this.setState({counter:0});
+    else {
+      this.setState({ counter: 0 });
     }
   }
-  static getDerivedStateFromProps(){
+  static getDerivedStateFromProps() {
     console.log("Parent Get Derived State From Props");
     return null;
   }
-  shouldComponentupdate(){
+  shouldComponentUpdate() {
     console.log("Parent Should Component Update");
     return true;
   }
-  componentDidMount(){
+  componentDidMount() {
     console.log("Parent Component Did Mount");
   }
-  componentDidUpdate(){
+  componentDidUpdate() {
     console.log("Parent Component Did Update")
   }
-  componentWillunmount(){
+  componentWillUnmount() {
     console.log("Parent component Will UnMount");
-}
-  render(){
+  }
+  render() {
     console.log("Parent Render");
-    return(
+    return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.buttonText}>
+        <Text style={styles.text}>
           COUNTER APP
         </Text>
 
-        <View style={{marginTop:100}}>
+        <View style={{ marginTop: 100 }}>
           {/* <Text style={styles.displayApp}>
             {this.state.counter}
           </Text> */}
           <AppChild counter={this.state.counter}></AppChild>
         </View>
 
-        <View style={{display:'flex',flexDirection:"row", justifyContent:"space-evenly"}}>
+        <View style={{ display: 'flex', flexDirection: "row", justifyContent: "space-evenly" }}>
 
           <TouchableOpacity style={styles.button} onPress={this.increment}>
             <Text style={styles.buttonTextINC}>
@@ -92,10 +92,10 @@ class App extends Component{
   }
 }
 const styles = StyleSheet.create({
-  container:{
-    display:'flex',
-    flex:1,
-    backgroundColor:'grey'
+  container: {
+    display: 'flex',
+    flex: 1,
+    backgroundColor: 'white'
   },
   // displayApp:{
   //   fontSize:80,
@@ -103,44 +103,44 @@ const styles = StyleSheet.create({
   //   color:"green",
   //   textAlign:"center",
   // },
-  buttonText : {
-    fontSize:40,
-    padding:10,
-    fontWeight:"bold",
-    textAlign:"center",
-    color:"white"
+  text: {
+    fontSize: 45,
+    padding: 10,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "blue"
   },
-  buttonTextINC : {
-    fontSize:30,
-    padding:9,
-    textAlign:"center"
+  buttonTextINC: {
+    fontSize: 30,
+    padding: 9,
+    textAlign: "center"
   },
-  buttonTextDEC : {
-    fontSize:40,
-    padding:9,
-    textAlign:"center"
+  buttonTextDEC: {
+    fontSize: 40,
+    padding: 9,
+    textAlign: "center"
   },
-  buttonTextRES : {
-    fontSize:30,
-    padding:10,
-    fontWeight:"bold",
-    textAlign:"center"
+  buttonTextRES: {
+    fontSize: 30,
+    padding: 10,
+    fontWeight: "bold",
+    textAlign: "center"
   },
-  button : {
-    backgroundColor:"skyblue",
-    marginTop:100,
-    borderRadius:10,
+  button: {
+    backgroundColor: "skyblue",
+    marginTop: 100,
+    borderRadius: 10,
     borderWidth: 2,
-    borderColor: 'pink'
-    
+    borderColor: 'pink',
+    width: 80,
   },
-  resetButton:{
-    backgroundColor:"skyblue",
-    marginTop:130,
-    borderRadius:15,
-    marginHorizontal:30,
+  resetButton: {
+    backgroundColor: "skyblue",
+    marginTop: 130,
+    borderRadius: 15,
+    marginHorizontal: 30,
     borderWidth: 2,
-    borderColor: 'pink'
+    borderColor: 'pink',
   }
 });
 export default App;

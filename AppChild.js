@@ -1,31 +1,34 @@
-import React,{Component} from "react";
-import {View,Text,SafeAreaView,StyleSheet} from "react-native";
+import React, { Component } from "react";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 
-class AppChild extends Component{
-    constructor(){
+class AppChild extends Component {
+    constructor() {
         super();
         console.log("Child Constructor");
+        this.state = {
+
+        }
     }
-    static getDerivedStateFromProps(){
+    static getDerivedStateFromProps() {
         console.log("Child Get Derived State From Props");
         return null;
-    } 
-    shouldComponentupdate(){
+    }
+    shouldComponentUpdate() {
         console.log("Child Should Component Update");
         return true;
-      }
-    componentDidMount(){
+    }
+    componentDidMount() {
         console.log("Child Component Did Mount");
-      }
-    componentDidUpdate(){
+    }
+    componentDidUpdate() {
         console.log("Child Component Did Update")
-      }
-    componentWillunmount(){
+    }
+    componentWillUnmount() {
         console.log("Child component Will UnMount");
     }
-    render(){
+    render() {
         console.log("Child Render");
-        return(
+        return (
             <SafeAreaView>
                 <View>
                     <Text style={styles.displayApp}>
@@ -36,17 +39,17 @@ class AppChild extends Component{
         );
     }
 }
-const styles=StyleSheet.create({
-    displayApp:{
-        fontSize:100,
-        backgroundColor:"green",
-        marginHorizontal:10,
-        color:"skyblue",
-        textAlign:"center",
-        borderRadius: 16,
+const styles = StyleSheet.create({
+    displayApp: {
+        fontSize: 100,
+        backgroundColor: "green",
+        marginHorizontal: 10,
+        color: "skyblue",
+        textAlign: "center",
+        borderRadius: 20,
         borderWidth: 2,
         borderColor: 'white'
-        
-      },
+
+    },
 });
 export default AppChild;
