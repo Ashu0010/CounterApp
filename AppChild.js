@@ -5,9 +5,7 @@ class AppChild extends Component {
     constructor() {
         super();
         console.log("Child Constructor");
-        this.state = {
-
-        }
+        this.state={}
     }
     static getDerivedStateFromProps() {
         console.log("Child Get Derived State From Props");
