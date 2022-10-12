@@ -7,7 +7,8 @@ import {
     TouchableOpacity,
     Image,
     ScrollView,
-    ImageBackground
+    ImageBackground,
+    Alert
 } from "react-native";
 
 export default class scrollStyling extends Component {
@@ -81,7 +82,7 @@ export default class scrollStyling extends Component {
                         </View>
                     </View>
 
-                    <View style={styles.lineBetwen}/>
+                    <View style={styles.lineBetween} />
 
                     <View style={styles.movieInfo}>
                         <View>
@@ -108,7 +109,7 @@ export default class scrollStyling extends Component {
                                 112 min
                             </Text>
                         </View>
-                        
+
                     </View>
 
                     <View>
@@ -134,45 +135,45 @@ export default class scrollStyling extends Component {
 
                         <ScrollView horizontal={true}>
 
-                        <View style={styles.screenshotScrollView}>
-                            <Image 
-                            resizeMode={'contain'}
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
-                            style={styles.screenshotImage}/>
-                            <Image 
-                            resizeMode={'contain'}
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
-                            style={styles.screenshotImage}/>
-                            <Image 
-                            resizeMode={'contain'}
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
-                            style={styles.screenshotImage}/>
-                            <Image 
-                            resizeMode={'contain'}
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
-                            style={styles.screenshotImage}/>
-                            <Image 
-                            resizeMode={'contain'}
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
-                            style={styles.screenshotImage}/>
-                            <Image 
-                            resizeMode={'contain'}
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
-                            style={styles.screenshotImage}/>
-                        </View>
+                            <View style={styles.screenshotsScrollView}>
+                                <Image
+                                    resizeMode={'contain'}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    style={styles.screenshotImage} />
+                                <Image
+                                    resizeMode={'contain'}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    style={styles.screenshotImage} />
+                                <Image
+                                    resizeMode={'contain'}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    style={styles.screenshotImage} />
+                                <Image
+                                    resizeMode={'contain'}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    style={styles.screenshotImage} />
+                                <Image
+                                    resizeMode={'contain'}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    style={styles.screenshotImage} />
+                                <Image
+                                    resizeMode={'contain'}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    style={styles.screenshotImage} />
+                            </View>
 
                         </ScrollView>
 
                     </View>
 
                     <View style={styles.buyTicket}>
-                    <TouchableOpacity>
-                        <Text style={styles.buyTicketText}>
-                            BUY TICKET
-                        </Text>
-                    </TouchableOpacity>
+                        <TouchableOpacity onPress={(() => alert("Ticket booked"))}>
+                            <Text style={styles.buyTicketText}>
+                                BUY TICKET
+                            </Text>
+                        </TouchableOpacity>
 
-                </View>
+                    </View>
 
                 </ScrollView>
 
@@ -183,8 +184,8 @@ export default class scrollStyling extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        margin: 20,
-        backgroundColor:'rgb(248,249,252)'
+        // margin: 20,
+        backgroundColor: 'rgb(248,249,252)'
     },
     headerView: {
         flexDirection: "row",
@@ -204,7 +205,7 @@ const styles = StyleSheet.create({
     image: {
         height: 370,
         width: 270,
-        borderRadius: 2
+        borderRadius: 20
     },
     movieName: {
         alignItems: 'center',
@@ -218,9 +219,9 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     movieNameText3: {
-        margintop:12,
+        margintop: 12,
         marginBottom: 2,
-        color:'rgb(100,102,107)'
+        color: 'rgb(100,102,107)'
     },
     movieGenre: {
         flexDirection: "row",
@@ -232,7 +233,7 @@ const styles = StyleSheet.create({
     movieGenreText: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize:12
+        fontSize: 12
     },
     movieGenreAdventure: {
         padding: 10,
@@ -249,49 +250,50 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgb(61,106,246)',
         borderRadius: 17
     },
-    lineBetwen:{
-        borderBottomColor:'rgb(242,243,248)',
-        marginTop:50,
-        borderBottomWidth:1
+    lineBetween: {
+        borderBottomColor: 'rgb(243,243,248)',
+        marginTop: 50,
+        borderBottomWidth: 1
     },
-    movieInfo:{
-        flexDirection:'row',
-        justifyContent:"space-evenly",
-        marginHorizontal:40,
-        marginTop:30
+    movieInfo: {
+        flexDirection: 'row',
+        justifyContent: "space-evenly",
+        marginHorizontal: 45,
+        marginTop: 30
     },
     movieInfoText1: {
-        color:'rgb(147,149,155)',
-        marginBottom:5
+        color: 'rgb(147,149,155)',
+        marginBottom: 5
     },
     movieInfoText2: {
     },
-    about:{
-        marginTop:20,
-        marginBottom:15,
-        color:'rgb(100,102,107)'
+    about: {
+        marginTop: 30,
+        marginBottom: 15,
+        color: 'rgb(100,102,107)'
     },
-    aboutText:{
-        fontSize:12,
-        fontFamily:'arial',
-        marginRight:21,
-        marginBottom:6,
-        color:'rgb(147,149,155)'
+    aboutText: {
+        fontSize: 12,
+        fontFamily: 'arial',
+        marginRight: 21,
+        marginBottom: 6,
+        color: 'rgb(147,149,155)'
     },
-    screenshot:{
-        marginTop:20,
+    screenshot: {
+        marginTop: 20,
         //fontFamily:'ChalkboardSE-Bold'
-        color:'rgb(100,102,107)'
+        color: 'rgb(100,102,107)'
     },
-    screenshotScrollView:{
-        flexDirection:'row',
-        backgroundColor:'rgb(255,255,255)'
+    screenshotsScrollView: {
+        flexDirection: 'row',
+        backgroundColor: 'rgb(255,255,255)'
     },
-    screenshotImage:{
+    screenshotImage: {
         width: 250,
         height: 150,
         borderWidth: 0.1,
         borderRadius: 10,
+        borderColor: 'green',
         marginVertical: 10,
         marginLeft: 15,
         marginRight: 0,
@@ -302,9 +304,9 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: 'rgb(60,106,246)',
         color: 'white',
-        borderRadius:5,
-        marginTop:25,
-        marginBottom:17
+        borderRadius: 5,
+        marginTop: 25,
+        marginBottom: 17
         // position: 'absolute',
         // bottom: 40,
         // left:0,
