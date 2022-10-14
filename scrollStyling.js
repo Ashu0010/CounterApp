@@ -12,6 +12,20 @@ import {
 } from "react-native";
 
 export default class scrollStyling extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         dynamicInputFields: []
+    //     }
+    // }
+    // OtpCustomInputHandler=(value,index)=>{
+    //     this.state.dynamicInputFields[index].otp_num=value;
+    //     this.setState({dynamicInputFields:this.state.dynamicInputFields});
+    // }
+    // OtpCustomeDelete = (index)=>{
+    //     this.state.dynamicInputFields.splice(index,1);
+    //     this.setState({dynamicInputFields:this.state.dynamicInputFields})
+    // }
     render() {
         return (
             <SafeAreaView style={styles.container}>
