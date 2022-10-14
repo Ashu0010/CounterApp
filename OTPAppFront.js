@@ -12,10 +12,10 @@ export default class OTPAppFront extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            otpnum1: "",
-            otpnum2: "",
-            otpnum3: "",
-            otpnum4: "",
+            otpnum1: '',
+            otpnum2: '',
+            otpnum3: '',
+            otpnum4: '',
         }
     }
     render() {
@@ -41,21 +41,18 @@ export default class OTPAppFront extends Component {
                         autoFocus={true}
                         style={styles.otpInput}
                         maxLength={1}
+                        value={this.state.otpnum1}
                         onChangeText={(otpnum1) => {
                             this.setState({ otpnum1: otpnum1 })
-                            if (otpnum1 != "") {
-                                this.refs.otpnum2ref.focus();
-                            }
-                            else {
-
-                            }
-                        }}
+                            if (otpnum1 !='') {
+                                this.refs.otpnum2ref.focus()
+                         }}}
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
 
                             }
                             else if (this.state.otpnum1 != ""){
-                                this.refs.otpnum2ref.focus();
+                                this.refs.otpnum2ref.focus()
                             }
                         }
                         }/>
@@ -64,21 +61,22 @@ export default class OTPAppFront extends Component {
                         ref={'otpnum2ref'}
                         style={styles.otpInput}
                         maxLength={1}
+                        value={this.state.otpnum2}
                         onChangeText={(otpnum2) => {
                             this.setState({ otpnum2: otpnum2 })
                             if (otpnum2 != '') {
-                                this.refs.otpnum3ref.focus();
+                                this.refs.otpnum3ref.focus()
                             }
                             else {
-                                this.refs.otpnum1ref.focus();
+                                this.refs.otpnum1ref.focus()
                             }
                         }} 
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
-                                this.refs.otpnum1ref.focus();
+                                this.refs.otpnum1ref.focus()
                             }
-                            else if (this.state.otpnum1 != ""){
-                                this.refs.otpnum3ref.focus();
+                            else if (this.state.otpnum2 != ""){
+                                this.refs.otpnum3ref.focus()
                             }
                         }
                         }/>
@@ -87,20 +85,21 @@ export default class OTPAppFront extends Component {
                         ref={'otpnum3ref'}
                         style={styles.otpInput}
                         maxLength={1}
+                        value={this.state.otpnum3}
                         onChangeText={(otpnum3) => {
                             this.setState({ otpnum3: otpnum3 })
                             if (otpnum3 != '') {
-                                this.refs.otpnum4ref.focus();
+                                this.refs.otpnum4ref.focus()
                             }
                             else {
-                                this.refs.otpnum2ref.focus();
+                                this.refs.otpnum2ref.focus()
                             }
                         }} 
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
                                 this.refs.otpnum2ref.focus();
                             }
-                            else if (this.state.otpnum1 != ""){
+                            else if (this.state.otpnum3 != ""){
                                 this.refs.otpnum4ref.focus();
                             }
                         }
@@ -110,27 +109,30 @@ export default class OTPAppFront extends Component {
                         ref={'otpnum4ref'}
                         style={styles.otpInput}
                         maxLength={1}
+                        value={this.state.otpnum4}
                         onChangeText={(otpnum4) => {
                             this.setState({ otpnum4: otpnum4 })
                             if (otpnum4 != '') {
-                                alert("click on continue");
+                                alert("click on continue")
                             }
                             else {
-                                this.refs.otpnum3ref.focus();
+                                this.refs.otpnum3ref.focus()
                             }
                         }} 
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
-                                this.refs.otpnum3ref.focus();
+                                this.refs.otpnum3ref.focus()
+
+
                             }
-                            else if (this.state.otpnum1 != ""){
+                            else if (this.state.otpnum4 != ""){
                             }
                         }
                         }/>
                 </View>
 
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={() => { alert("OTP Checking"); }}>
+                    <TouchableOpacity onPress={() => { alert("OTP Verifying"); }}>
                         <Text style={styles.buttonText}>
                             Continue
                         </Text>
@@ -233,7 +235,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'rgb(231,231,231)',
         borderRadius: 4,
-        padding: 8,
+        padding: 15,
     },
     buttonContainer: {
         padding: 12,
