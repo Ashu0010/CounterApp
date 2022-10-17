@@ -52,12 +52,12 @@ export default class Login extends Component {
                         </Text>
                     </TouchableOpacity >
 
-                    <TouchableOpacity>
+                    {/* <TouchableOpacity>
                     <Image
                             resizeMode={'contain'}
                             style={styles.eye}
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/iconmonstr-eye-9.png')} />
-                    </TouchableOpacity>
+                            source={require('/Users/ashishnegi/Desktop/CounterApp/icons8-hide-60.png')} />
+                    </TouchableOpacity> */}
 
                     <TouchableOpacity>
                         <Text style={styles.buttonTextStyle2}>

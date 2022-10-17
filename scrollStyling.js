@@ -11,17 +11,19 @@ import {
     Alert
 } from "react-native";
 
-export default class scrollStyling extends Component {
+export default class ScrollStyling extends Component {
     // constructor(props) {
     //     super(props);
     //     this.state = {
     //         dynamicInputFields: []
     //     }
     // }
+    // Input handling in dynamic 
     // OtpCustomInputHandler=(value,index)=>{
     //     this.state.dynamicInputFields[index].otp_num=value;
     //     this.setState({dynamicInputFields:this.state.dynamicInputFields});
     // }
+    //Input deleting in dynamic 
     // OtpCustomeDelete = (index)=>{
     //     this.state.dynamicInputFields.splice(index,1);
     //     this.setState({dynamicInputFields:this.state.dynamicInputFields})
@@ -53,7 +55,7 @@ export default class scrollStyling extends Component {
 
                     <View style={styles.moviePoster}>
                         <Image
-                            source={require('/Users/ashishnegi/Desktop/CounterApp/anime1988-Demon-Slayer-10-786x1100.jpeg')}
+                            source={require('/Users/ashishnegi/Desktop/CounterApp/images/anime1988-Demon-Slayer-10-786x1100.jpeg')}
                             style={styles.image}
                             resizeMode='contain' />
                     </View>
@@ -152,27 +154,27 @@ export default class scrollStyling extends Component {
                             <View style={styles.screenshotsScrollView}>
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                                 <Image
                                     resizeMode={'contain'}
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/img2021052511175286177600.png')}
+                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/img2021052511175286177600.png')}
                                     style={styles.screenshotImage} />
                             </View>
 

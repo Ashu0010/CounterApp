@@ -18,9 +18,19 @@ export default class OTPAppFront extends Component {
             otpnum4: '',
         }
     }
+     // creating a function inside function to use on Onchange text
+    //  onChanged(text){
+    //     this.setState({otpnum1:text.replace(/[^0-9]/g,'')}); // to input only 0-9 numbers in text Input
+    //     func=(text) => {
+    //         this.setState({ otpnum1: text })
+    
+    //         if (otpnum1 !='') {
+    //             this.refs.otpnum2ref.focus()
+    //      }}
+    //     }
     render() {
         return (
-            <View >
+            <View style={styles.container}>
 
                 <View style={styles.headerContainer}>
                     <Text style={styles.headerText}>
@@ -131,15 +141,15 @@ export default class OTPAppFront extends Component {
                         }/>
                 </View>
 
-                <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={() => { alert("OTP Verifying"); }}>
+                <View>
+                    <TouchableOpacity style={styles.buttonContainer} onPress={() => { alert("OTP Verifying"); }}>
                         <Text style={styles.buttonText}>
                             Continue
                         </Text>
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.spaceContainer} />
+                <View/>
 
                 <View style={styles.keypadContainer}>
                     <View style={styles.keyContainer}>
@@ -202,10 +212,13 @@ export default class OTPAppFront extends Component {
 }
 
 const styles = StyleSheet.create({
+    container:{
+        flex:1,
+    },
     headerContainer: {
         backgroundColor: 'rgb(109,188,120)',
         paddingTop: 60,
-        paddingBottom: 12
+        paddingBottom: 12,
     },
     headerText: {
         color: 'rgb(210,241,213)',
@@ -235,7 +248,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'rgb(231,231,231)',
         borderRadius: 4,
-        padding: 15,
+        padding: 16,
     },
     buttonContainer: {
         padding: 12,
@@ -250,13 +263,17 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: 'bold'
     },
-    spaceContainer: {
-        paddingTop: 220,
-    },
+    // spaceContainer: {
+    //     paddingTop: 300,
+    //     paddingBottom:30,
+    // },
     keypadContainer: {
-        paddingTop: 5,
-        paddingBottom: "100%",
+        position:'absolute',
+        bottom:0,
+        right:0,
+        left:0,
         backgroundColor: 'rgb(211,214,222)',
+        paddingBottom:18,
     },
     keyContainer: {
         flexDirection: 'row',
@@ -277,7 +294,8 @@ const styles = StyleSheet.create({
         borderColor: 'rgb(231,231,231)',
         borderRadius: 8,
         // paddingBottom: 4,
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop:2
     },
     keyButtonNumber: {
         paddingTop: 2,
