@@ -18,12 +18,12 @@ export default class OTPAppFront extends Component {
             otpnum4: '',
         }
     }
-     // creating a function inside function to use on Onchange text
+    // creating a function inside function to use on Onchange text
     //  onChanged(text){
     //     this.setState({otpnum1:text.replace(/[^0-9]/g,'')}); // to input only 0-9 numbers in text Input
     //     func=(text) => {
     //         this.setState({ otpnum1: text })
-    
+
     //         if (otpnum1 !='') {
     //             this.refs.otpnum2ref.focus()
     //      }}
@@ -54,18 +54,19 @@ export default class OTPAppFront extends Component {
                         value={this.state.otpnum1}
                         onChangeText={(otpnum1) => {
                             this.setState({ otpnum1: otpnum1 })
-                            if (otpnum1 !='') {
+                            if (otpnum1 != '') {
                                 this.refs.otpnum2ref.focus()
-                         }}}
+                            }
+                        }}
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
 
                             }
-                            else if (this.state.otpnum1 != ""){
+                            else if (this.state.otpnum1 != "") {
                                 this.refs.otpnum2ref.focus()
                             }
                         }
-                        }/>
+                        } />
                     <TextInput
                         keyboardType="numeric"
                         ref={'otpnum2ref'}
@@ -80,16 +81,16 @@ export default class OTPAppFront extends Component {
                             else {
                                 this.refs.otpnum1ref.focus()
                             }
-                        }} 
+                        }}
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
                                 this.refs.otpnum1ref.focus()
                             }
-                            else if (this.state.otpnum2 != ""){
+                            else if (this.state.otpnum2 != "") {
                                 this.refs.otpnum3ref.focus()
                             }
                         }
-                        }/>
+                        } />
                     <TextInput
                         keyboardType="numeric"
                         ref={'otpnum3ref'}
@@ -104,16 +105,16 @@ export default class OTPAppFront extends Component {
                             else {
                                 this.refs.otpnum2ref.focus()
                             }
-                        }} 
+                        }}
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
                                 this.refs.otpnum2ref.focus();
                             }
-                            else if (this.state.otpnum3 != ""){
+                            else if (this.state.otpnum3 != "") {
                                 this.refs.otpnum4ref.focus();
                             }
                         }
-                        }/>
+                        } />
                     <TextInput
                         keyboardType="numeric"
                         ref={'otpnum4ref'}
@@ -128,17 +129,17 @@ export default class OTPAppFront extends Component {
                             else {
                                 this.refs.otpnum3ref.focus()
                             }
-                        }} 
+                        }}
                         onKeyPress={({ nativeEvent }) => {
                             if (nativeEvent.key === 'Backspace') {
                                 this.refs.otpnum3ref.focus()
 
 
                             }
-                            else if (this.state.otpnum4 != ""){
+                            else if (this.state.otpnum4 != "") {
                             }
                         }
-                        }/>
+                        } />
                 </View>
 
                 <View>
@@ -149,7 +150,7 @@ export default class OTPAppFront extends Component {
                     </TouchableOpacity>
                 </View>
 
-                <View/>
+                <View />
 
                 <View style={styles.keypadContainer}>
                     <View style={styles.keyContainer}>
@@ -197,13 +198,13 @@ export default class OTPAppFront extends Component {
                         <TouchableOpacity style={styles.keyButton}>
                             <Text style={styles.keyButtonNumberZero}> 0 </Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.backButton}>
-                            <Image
-                                source={require('/Users/ashishnegi/Desktop/CounterApp/icons8-back-60.png')}
-                                style={styles.backButtonImage}
-                                resizeMode='contain' />
-                        </TouchableOpacity>
                     </View>
+                    {/* <TouchableOpacity style={styles.backButton}>
+                        <Image
+                            source={require('/Users/ashishnegi/Desktop/CounterApp/icons8-back-60.png')}
+                            style={styles.backButtonImage}
+                            resizeMode='contain' />
+                    </TouchableOpacity> */}
                 </View>
 
             </View>
@@ -212,8 +213,8 @@ export default class OTPAppFront extends Component {
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
+    container: {
+        flex: 1,
     },
     headerContainer: {
         backgroundColor: 'rgb(109,188,120)',
@@ -268,12 +269,12 @@ const styles = StyleSheet.create({
     //     paddingBottom:30,
     // },
     keypadContainer: {
-        position:'absolute',
-        bottom:0,
-        right:0,
-        left:0,
+        position: 'absolute',
+        bottom: 0,
+        right: 0,
+        left: 0,
         backgroundColor: 'rgb(211,214,222)',
-        paddingBottom:18,
+        paddingBottom: 18,
     },
     keyContainer: {
         flexDirection: 'row',
@@ -282,7 +283,7 @@ const styles = StyleSheet.create({
     },
     keyContainerZero: {
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         padding: 2
     },
     keyButton: {
@@ -295,7 +296,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         // paddingBottom: 4,
         alignItems: 'center',
-        marginTop:2
+        marginTop: 2
     },
     keyButtonNumber: {
         paddingTop: 2,
@@ -307,7 +308,8 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: 'rgb(65,65,65)',
         paddingTop: 5,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        alignItems:'center'
     },
     keyButtonText: {
         fontSize: 10,

@@ -2,13 +2,17 @@
  * @format
  */
 
-import {AppRegistry} from 'react-native';
-// import App from './App';
-//import App from './Login';
-//import App from './ScrollStyling';
-//import App from './OTPAppFront';
-//import App from './HexCodeInScreen';
-import App from './NavigateProjectScreens';
-import {name as appName} from './app.json';
+import { AppRegistry } from 'react-native';
+import CounterApp from './CounterApp';
+import LogIn from './Login';
+import ScrollStyling from './ScrollStyling';
+import OtpAppFront from './OTPAppFront';
+import HexCodeInScreen from './HexCodeInScreen';
+import HomeScreen from './HomeScreen';
+import NavigateProjectScreens from './NavigateProjectScreens';
+import TabNavigationProjectScreens from './TabNavigationProjectScreens';
+import MyntraScreen from './MyntraScreen';
+import MyntraNavigation from './MyntraNavigation';
+import { name as appName } from './app.json';
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => MyntraNavigation);

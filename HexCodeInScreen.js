@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import {
     Text,
     View,
@@ -9,66 +9,85 @@ import {
 } from 'react-native';
 
 export default class HexCodeInScreen extends Component {
-    constructor(){
+    constructor() {
         super();
-        this.state={
-            hexColorValue:'',
-            color:'grey'
+        this.state = {
+            ColorInput: '',
+            ColorOutput: '',
         };
     }
-    render(){
-        return(
+    render() {
+        return (
             <SafeAreaView style={styles.container}>
                 <View>
                     <Text style={styles.heading}>
-                        Hexcode Color in Screen 
+                        Color in Screen
                     </Text>
                 </View>
 
-                <View style={styles.colorContainer}>
-                    
+                {/* <View style={[styles.colorContainer, {backgroundColor:this.state.ColorOutput}]}>  */}
+                <View style={ColorOutputScreen(this.state.ColorOutput).boxx}>
+
                 </View>
 
                 <View style={styles.hexCodeInputContainer}>
-                <TextInput
+                    <TextInput
                         style={styles.hexCodeInput}
-                        value={this.setState.hexColorValue}
-                        placeholderTextColor="black"
-                        placeholder='Hex Code / color Input' />
+                        placeholderTextColor="blue"
+                        placeholder='Hex Code / color Input'
+                        onChangeText={(text) =>
+                            this.setState({ ColorInput: text.toLowerCase() })} />
                 </View>
                 <View>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity style={styles.buttonContainer}
+                        onPress={() =>
+                            this.setState({ ColorOutput: this.state.ColorInput })}>
                         <Text style={styles.buttonText}>
-                            Click 
+                            Click
                         </Text>
                     </TouchableOpacity>
                 </View>
-                
+
             </SafeAreaView>
-        )
+        );
     }
 }
 
-const styles=StyleSheet.create({
-    container:{
-        flex:1,
-        alignItems:'center',
-        marginTop:50,
+const ColorOutputScreen = (ColorOutputScn) => 
+    StyleSheet.create({
+        boxx: {
+            backgroundColor: ColorOutputScn,
+            marginTop: 40,
+            borderColor: 'grey',
+            borderRadius: 3,
+            borderWidth: 0.4,
+            height: 170,
+            width: 290,
+        },
+    });
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        marginTop: 30,
     },
-    heading:{
-        textAlign:'center',
-        fontSize:25,
-        color:'red',
-        fontWeight:"bold",
+    heading: {
+        textAlign: 'center',
+        fontSize: 25,
+        color: 'red',
+        fontWeight: "bold",
+        marginTop: 30,
     },
-    colorContainer:{
-        marginTop:70,
-        borderColor:'grey',
-        borderRadius:3,
-        borderWidth:0.4,
-        height:170,
-        width:290,
-    },
+    // colorContainer: {
+    //     marginTop: 40,
+    //     borderColor: 'grey',
+    //     borderRadius: 3,
+    //     borderWidth: 0.4,
+    //     height: 170,
+    //     width: 290,
+    // },
     hexCodeInputContainer: {
         marginTop: 100,
     },
@@ -81,19 +100,19 @@ const styles=StyleSheet.create({
         borderRadius: 4,
         padding: 16,
     },
-    buttonContainer:{
-        marginTop:30,
-        backgroundColor:'skyblue',
-        borderColor:'rgb(231,231,231)',
-        borderRadius:5,
-        borderWidth:1,
-        height:40,
-        width:150,
-        padding:10,
+    buttonContainer: {
+        marginTop: 30,
+        backgroundColor: 'skyblue',
+        borderColor: 'rgb(231,231,231)',
+        borderRadius: 5,
+        borderWidth: 1,
+        height: 40,
+        width: 150,
+        padding: 10,
     },
-    buttonText:{
-        textAlign:'center',
-        fontSize:15,
-        fontWeight:'bold',
+    buttonText: {
+        textAlign: 'center',
+        fontSize: 15,
+        fontWeight: 'bold',
     },
-})
+});

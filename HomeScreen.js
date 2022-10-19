@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView, StyleSheet, ImageBackground, Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import CounterApp from './CounterApp';
-import LogIn from './Login';
-import ScrollStyling from './ScrollStyling';
-import OtpAppFront from './OTPAppFront';
-import HexCodeInScreen from './HexCodeInScreen';
-
-const Stack = createNativeStackNavigator();
 
 function HomeScreen({ navigation }) {
     return (
@@ -67,23 +58,7 @@ function HomeScreen({ navigation }) {
         </View>
     )
 }
-class NavigateProjectScreens extends Component {
-    render() {
-        return (
-            <NavigationContainer>
-                <Stack.Navigator initialRouteName="Home">
-                    <Stack.Screen name="Home" component={HomeScreen} />
-                    <Stack.Screen name="CounterApp" component={CounterApp} />
-                    <Stack.Screen name="TicketApp" component={ScrollStyling} />
-                    <Stack.Screen name="LogInApp" component={LogIn} />
-                    <Stack.Screen name="OtpApp" component={OtpAppFront} />
-                    <Stack.Screen name="ColorInScreenApp" component={HexCodeInScreen} />
-                </Stack.Navigator>
-            </NavigationContainer>
-        );
-    }
-}
-export default NavigateProjectScreens;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
     container: {
