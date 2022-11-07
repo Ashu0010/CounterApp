@@ -5,7 +5,7 @@ function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require('/Users/ashishnegi/Desktop/CounterApp/images/images.jpeg')}
+                source={require('./images/images.jpeg')}
                 resizeMode='cover'
                 style={styles.image}>
 

@@ -32,7 +32,7 @@ export default class MyntraScreen extends Component {
                             <View style={styles.topViewBoxLine}>
                                 <TouchableOpacity style={styles.topViewBox}>
                                     <Image
-                                        source={require('/Users/ashishnegi/Desktop/CounterApp/images/icons8-sort-32.png')}
+                                        source={require('./images/icons8-sort-32.png')}
                                         style={styles.sortImage}
                                         resizeMode='contain' />
                                     <Text style={styles.topViewText}> SORT </Text>
@@ -40,7 +40,7 @@ export default class MyntraScreen extends Component {
                             </View>
                             <TouchableOpacity style={styles.topViewBox}>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/icons8-filter-48.png')}
+                                    source={require('./images/icons8-filter-48.png')}
                                     style={styles.filterImage}
                                     resizeMode='contain' />
                                 <Text style={styles.topViewText}> FILTER </Text>
@@ -92,12 +92,12 @@ export default class MyntraScreen extends Component {
 
                         <View style={styles.modelBox}>
                             <Image
-                                source={require('/Users/ashishnegi/Desktop/CounterApp/images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
+                                source={require('./images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
                                 style={styles.modelImage}
                                 resizeMode='cover' />
                             <TouchableOpacity>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/icons8-heart-50.png')}
+                                    source={require('./images/icons8-heart-50.png')}
                                     style={styles.whishlist}
                                     resizeMode='contain' />
                             </TouchableOpacity>
@@ -114,12 +114,12 @@ export default class MyntraScreen extends Component {
 
                         <View style={styles.modelBox}>
                             <Image
-                                source={require('/Users/ashishnegi/Desktop/CounterApp/images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
+                                source={require('./images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
                                 style={styles.modelImage}
                                 resizeMode='cover' />
                             <TouchableOpacity>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/icons8-heart-50.png')}
+                                    source={require('./images/icons8-heart-50.png')}
                                     style={styles.whishlist}
                                     resizeMode='contain' />
                             </TouchableOpacity>
@@ -140,12 +140,12 @@ export default class MyntraScreen extends Component {
 
                         <View style={styles.modelBox}>
                             <Image
-                                source={require('/Users/ashishnegi/Desktop/CounterApp/images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
+                                source={require('./images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
                                 style={styles.modelImage}
                                 resizeMode='cover' />
                             <TouchableOpacity>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/icons8-heart-50.png')}
+                                    source={require('./images/icons8-heart-50.png')}
                                     style={styles.whishlist}
                                     resizeMode='contain' />
                             </TouchableOpacity>
@@ -162,12 +162,12 @@ export default class MyntraScreen extends Component {
 
                         <View style={styles.modelBox}>
                             <Image
-                                source={require('/Users/ashishnegi/Desktop/CounterApp/images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
+                                source={require('./images/myntra-photography-in-delhi-bring-it-online_orig.jpeg')}
                                 style={styles.modelImage}
                                 resizeMode='cover' />
                             <TouchableOpacity>
                                 <Image
-                                    source={require('/Users/ashishnegi/Desktop/CounterApp/images/icons8-heart-50.png')}
+                                    source={require('./images/icons8-heart-50.png')}
                                     style={styles.whishlist}
                                     resizeMode='contain' />
                             </TouchableOpacity>
@@ -183,6 +183,7 @@ export default class MyntraScreen extends Component {
                         </View>
 
                     </View>
+                    
 
 
 

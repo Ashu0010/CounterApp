@@ -5,7 +5,7 @@
 import { AppRegistry } from 'react-native';
 import CounterApp from './CounterApp';
 import LogIn from './Login';
-import ScrollStyling from './ScrollStyling';
+import ScrollStyling from './ScrollStyling';WebView
 import OtpAppFront from './OTPAppFront';
 import HexCodeInScreen from './HexCodeInScreen';
 import HomeScreen from './HomeScreen';
